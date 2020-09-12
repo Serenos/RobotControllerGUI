@@ -1,0 +1,1595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowDesign</class>
+ <widget class="QMainWindow" name="MainWindowDesign">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ROS人机交互软件</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/images.qrc">
+    <normaloff>:/images/robot.png</normaloff>:/images/robot.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Australia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_16">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_15">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_19">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/images.qrc">:/images/robot2.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>机器人状态：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_statue_text">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#cc0000;&quot;&gt;离线&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_robot_staue_img">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/images.qrc">:/images/offline.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>电池电量</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/images.qrc">:/images/power.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+
+QProgressBar {
+   border: 2px solid grey;
+   border-radius: 5px;
+   text-align: center;
+}</string>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_11">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/images.qrc">:/images/power-v.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_power">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>00.00V</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QTabWidget" name="tab_manager">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1200</width>
+            <height>54531</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+background-color: rgb(238, 238, 236);</string>
+          </property>
+          <property name="locale">
+           <locale language="English" country="Australia"/>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab_status">
+           <attribute name="title">
+            <string>基本</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>10</y>
+                 <width>181</width>
+                 <height>761</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(186, 189, 182);
+
+
+</string>
+               </property>
+               <property name="title">
+                <string>Mission</string>
+               </property>
+               <widget class="QPushButton" name="button_simplesim">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>40</y>
+                  <width>161</width>
+                  <height>61</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::NoContextMenu</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>SimpleSim</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="button_gazebo">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>110</y>
+                  <width>161</width>
+                  <height>61</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>Gazebo</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="button_simulation">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>180</y>
+                  <width>161</width>
+                  <height>61</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>Simulation</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="button_teleop">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>250</y>
+                  <width>161</width>
+                  <height>61</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>Teleop</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="button_rviz">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>320</y>
+                  <width>161</width>
+                  <height>61</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>RVIZ</string>
+                </property>
+               </widget>
+               <widget class="QGroupBox" name="groupBox_6">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>390</y>
+                  <width>161</width>
+                  <height>201</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>SLAM</string>
+                </property>
+                <widget class="QPushButton" name="button_gmap">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>GMapping</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="button_cartographer">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>Catographer</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="button_hector">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>80</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>Hector</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="button_karto">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>80</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>Karto</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="button_savemap">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>140</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>SAVE_MAP</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="button_frontier">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>140</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                 </property>
+                 <property name="text">
+                  <string>Frontier</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="geometry">
+                <rect>
+                 <x>230</x>
+                 <y>10</y>
+                 <width>181</width>
+                 <height>261</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(186, 189, 182);</string>
+               </property>
+               <property name="title">
+                <string>Pose</string>
+               </property>
+               <widget class="QLCDNumber" name="lcdNumber_pose_x">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>40</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_pose_y">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>120</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_pose_z">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>200</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="pose_x">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>40</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     X</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="pose_y">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>120</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     Y</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="pose_z">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>200</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     Z</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QGroupBox" name="groupBox_5">
+               <property name="geometry">
+                <rect>
+                 <x>450</x>
+                 <y>10</y>
+                 <width>181</width>
+                 <height>261</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(186, 189, 182);</string>
+               </property>
+               <property name="title">
+                <string>Twist</string>
+               </property>
+               <widget class="QLCDNumber" name="lcdNumber_twist_x">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>40</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_twist_y">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>120</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_twist_z">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>200</y>
+                  <width>81</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid rgb(0, 0, 0);
+color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="twist_x">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>40</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     X</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="twist_y">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>120</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     Y</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="twist_z">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>200</y>
+                  <width>67</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>17</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+                </property>
+                <property name="text">
+                 <string>     Z</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QGroupBox" name="groupBox_7">
+               <property name="geometry">
+                <rect>
+                 <x>239</x>
+                 <y>339</y>
+                 <width>391</width>
+                 <height>431</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(186, 189, 182);</string>
+               </property>
+               <property name="title">
+                <string>FOR EXPANDING</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>rviz</string>
+           </attribute>
+           <widget class="QWidget" name="verticalLayoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>-10</x>
+              <y>0</y>
+              <width>751</width>
+              <height>801</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_build_map"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="verticalLayoutWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>739</x>
+              <y>-1</y>
+              <width>461</width>
+              <height>381</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_video0">
+               <property name="font">
+                <font>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border:1px solid rgb(0, 0, 0);
+background-color: rgb(186, 189, 182);</string>
+               </property>
+               <property name="text">
+                <string>Vedio0</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="verticalLayoutWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>740</x>
+              <y>440</y>
+              <width>461</width>
+              <height>361</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_video1">
+               <property name="styleSheet">
+                <string notr="true">border:1px solid rgb(0, 0, 0);
+background-color: rgb(186, 189, 182);</string>
+               </property>
+               <property name="text">
+                <string>Vedio1</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="label_v_name0">
+            <property name="geometry">
+             <rect>
+              <x>930</x>
+              <y>400</y>
+              <width>200</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Video0</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_v_name1">
+            <property name="geometry">
+             <rect>
+              <x>930</x>
+              <y>820</y>
+              <width>200</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Video1</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>其他</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_21">
+            <item>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <widget class="QLabel" name="label_video2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:1px solid rgb(0, 0, 0)</string>
+                  </property>
+                  <property name="text">
+                   <string>No Video</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_v_name2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Video2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="2">
+               <layout class="QVBoxLayout" name="verticalLayout_20">
+                <item>
+                 <widget class="QLabel" name="label_29">
+                  <property name="maximumSize">
+                   <size>
+                    <width>90</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>话题列表：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="topic_listWidget"/>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="1">
+               <layout class="QVBoxLayout" name="verticalLayout_19">
+                <item>
+                 <widget class="QLabel" name="label_video3">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:1px solid rgb(0, 0, 0)</string>
+                  </property>
+                  <property name="text">
+                   <string>No Video</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_v_name3">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>15</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Video3</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="minimumSize">
+           <size>
+            <width>370</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>370</width>
+            <height>5455315</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>基本控制</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="title">
+                 <string>主节点配置</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout">
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="text">
+                    <string>本机IP</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="text">
+                    <string>Ros Hostname</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0" colspan="3">
+                  <widget class="QLineEdit" name="line_edit_topic">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>unused</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0" colspan="3">
+                  <widget class="QCheckBox" name="checkbox_use_environment">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="text">
+                    <string>使用环境变量</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0" colspan="3">
+                  <widget class="QLineEdit" name="line_edit_host">
+                   <property name="text">
+                    <string>192.168.1.67</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="0" colspan="3">
+                  <widget class="QCheckBox" name="checkbox_remember_settings">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="text">
+                    <string>打开软件时自动连接master</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="text">
+                    <string>主节点地址</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="2">
+                  <widget class="QPushButton" name="button_connect">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="toolTip">
+                    <string>Set the target to the current joint trajectory state.</string>
+                   </property>
+                   <property name="statusTip">
+                    <string>Clear all waypoints and set the target to the current joint trajectory state.</string>
+                   </property>
+                   <property name="text">
+                    <string>连接</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/images.qrc">
+                     <normaloff>:/images/line.png</normaloff>:/images/line.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="1">
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="text">
+                    <string>🔗断开</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" colspan="3">
+                  <widget class="QLineEdit" name="line_edit_master">
+                   <property name="text">
+                    <string>http://192.168.1.2:11311/</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_3">
+                <property name="title">
+                 <string>运动控制</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="pushButton_back">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton#pushButton_back:pressed{background-color:rgb(239, 41, 41)}</string>
+                     </property>
+                     <property name="text">
+                      <string>X</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>X</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QLabel" name="label_linear">
+                     <property name="text">
+                      <string>50</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="pushButton_right">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton#pushButton_j:pressed{background-color:rgb(239, 41, 41)}</string>
+                     </property>
+                     <property name="text">
+                      <string>A</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>A</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="pushButton_forward">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton#pushButton_u:pressed{background-color:rgb(239, 41, 41)}</string>
+                     </property>
+                     <property name="text">
+                      <string>W</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>W</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QPushButton" name="pushButton_left">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton#pushButton_l:pressed{background-color:rgb(239, 41, 41)}</string>
+                     </property>
+                     <property name="text">
+                      <string>D</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>D</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>线速度(cm/s)：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QSlider" name="horizontalSlider_linear">
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>1</number>
+                     </property>
+                     <property name="value">
+                      <number>50</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_raw">
+                     <property name="text">
+                      <string>100</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_14">
+                     <property name="text">
+                      <string>角速度(cm/s)：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QSlider" name="horizontalSlider_raw">
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                     <property name="value">
+                      <number>100</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="pushButton_s">
+                     <property name="text">
+                      <string>S</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>S</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>rviz</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16</width>
+                    <height>16</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="../resources/images.qrc">:/images/classes/Displays.svg</pixmap>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>Displays</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QTreeWidget" name="treeWidget_rviz">
+                <attribute name="headerCascadingSectionResizes">
+                 <bool>true</bool>
+                </attribute>
+                <attribute name="headerMinimumSectionSize">
+                 <number>160</number>
+                </attribute>
+                <attribute name="headerDefaultSectionSize">
+                 <number>160</number>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string notr="true">1</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QPushButton" name="pushButton_add_topic">
+                  <property name="text">
+                   <string>Add</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_4">
+                  <property name="text">
+                   <string>Remove</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_5">
+                  <property name="text">
+                   <string>Rename</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>快捷指令</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_18"/>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>终端</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="action_2"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="action_Preferences">
+   <property name="text">
+    <string>&amp;功能</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/images.qrc"/>
+  <include location="../../Ros_Qt5_Gui_App/resources/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowDesign</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
